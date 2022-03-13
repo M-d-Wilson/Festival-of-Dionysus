@@ -7,7 +7,7 @@ public class Labyrinth_Player : MonoBehaviour
     [SerializeField]
     private int speed;
     [SerializeField]
-    private Vector3 StartPos;
+    private Vector2 StartPos;
     private Rigidbody2D rb;
     private RectTransform UIplace;
 
@@ -16,13 +16,13 @@ public class Labyrinth_Player : MonoBehaviour
         //assigns Rigidbody
         rb = GetComponent<Rigidbody2D>();
         UIplace = GetComponent<RectTransform>();
+        UIplace.localPosition = StartPos;
     }
 
     private void FixedUpdate()
     {
         float x = UIplace.position.x;
         float y = UIplace.position.y;
-        float z = UIplace.position.z;
         float newX = 0;
         float newY = 0;
 
@@ -48,5 +48,10 @@ public class Labyrinth_Player : MonoBehaviour
             rb.AddForce(new Vector2(newX, newY));
         else
             rb.Sleep();
+    }
+
+    public void ResetPos()
+    {
+        UIplace.localPosition = StartPos;
     }
 }
