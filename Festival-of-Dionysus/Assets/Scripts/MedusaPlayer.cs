@@ -2,22 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Labyrinth_Enemy : MonoBehaviour
+public class MedusaPlayer : MonoBehaviour
 {
     [SerializeField]
-    private RectTransform UIplace;
-    [SerializeField]
     private Vector2 StartPos;
+    private RectTransform UIplace;
 
     private void Awake()
     {
-        //assigns transform
+        //assighs transform and resets to start position
         UIplace = GetComponent<RectTransform>();
-        UIplace.localPosition = StartPos;
+        ResetPos();
     }
 
+    void Update()
+    {
+        
+    }
     public void ResetPos()
     {
+        //Puts Players in their start position
         UIplace.localPosition = StartPos;
     }
 }
