@@ -27,7 +27,10 @@ Transform:
   m_LocalPosition: {x: -6.907504, y: -0.25243318, z: -11.634926}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+<<<<<<< Updated upstream
   - {fileID: 2481709357824110366}
+=======
+>>>>>>> Stashed changes
   - {fileID: 2481709358381273722}
   - {fileID: 2481709357892186775}
   m_Father: {fileID: 0}
@@ -64,7 +67,11 @@ Transform:
   m_LocalScale: {x: 20, y: 0.01, z: 20}
   m_Children: []
   m_Father: {fileID: 4241862374012100208}
+<<<<<<< Updated upstream
   m_RootOrder: 2
+=======
+  m_RootOrder: 1
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2481709357892186774
 MeshFilter:
@@ -129,6 +136,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1001 &2481709357823696210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -175,6 +183,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 422476, guid: bf0421c3548a94b498496e7d5d11942f, type: 3}
   m_PrefabInstance: {fileID: 2481709357823696210}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &2481709358381206906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -184,7 +194,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 466688, guid: ad5ba38b24ceceb41830c9ae1e75dcda, type: 3}
       propertyPath: m_RootOrder
+<<<<<<< Updated upstream
       value: 1
+=======
+      value: 0
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 466688, guid: ad5ba38b24ceceb41830c9ae1e75dcda, type: 3}
       propertyPath: m_LocalPosition.x
