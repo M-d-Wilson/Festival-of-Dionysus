@@ -5648,8 +5648,8 @@ MonoBehaviour:
   Player1: {fileID: 708526919}
   Player2: {fileID: 1071219639}
   medusaLogic: {fileID: 890348286}
-  MovementMin: 2
-  MovementMax: 5
+  MovementMin: 5
+  MovementMax: 10
 --- !u!1 &1008990403
 GameObject:
   m_ObjectHideFlags: 0
