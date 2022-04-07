@@ -377,7 +377,7 @@ public class QuestionHandler : MonoBehaviour
 
     public void CallGreek()
     {
-        num = Random.Range(0, 16);
+        num = Random.Range(0, 10);
         randomQuestion.GreekQuestion();
         questionAsked = true;
         if (num == 0)
