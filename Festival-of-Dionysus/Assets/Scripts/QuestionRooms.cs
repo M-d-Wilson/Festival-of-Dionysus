@@ -6,6 +6,7 @@ public class QuestionRooms : MonoBehaviour
 {
     [SerializeField]
     private bool QuestionOnce = true;
+    public QuestionHandler questionHandler;
 
     private void Awake()
     {
@@ -22,6 +23,6 @@ public class QuestionRooms : MonoBehaviour
 
     private void RunQuestion()
     {
-        Debug.Log("Run Question");
+        questionHandler.CallRandom();
     }
 }

@@ -515,6 +515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &59055509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1707,6 +1708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &254248338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2788,6 +2790,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 540090929}
   m_CullTransparentMesh: 1
+--- !u!1 &543718586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543718589}
+  - component: {fileID: 543718588}
+  - component: {fileID: 543718587}
+  m_Layer: 0
+  m_Name: QuestionHandler/Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &543718587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543718586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57110392c82fe91429d878fc0f4558c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: 0
+  y: 0
+  z: 0
+  temp: 0
+  question: 
+  answer1: 
+  answer2: 
+  answer3: 
+  answer4: 
+--- !u!114 &543718588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543718586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b250b4d871f48d41b5b412863f6d4bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomQuestion: {fileID: 543718587}
+  answerA: 
+  answerB: 
+  answerC: 
+  answerD: 
+  correctA: 0
+  correctB: 0
+  correctC: 0
+  correctD: 0
+  questionAsked: 0
+  answeredCorrect: 0
+  num: 0
+--- !u!4 &543718589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543718586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.78349, y: -18.336914, z: 85.853035}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &548549715
 GameObject:
   m_ObjectHideFlags: 0
@@ -2976,6 +3055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &555027569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3092,6 +3172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &557589849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3356,6 +3437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &668973727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4821,6 +4903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &903181517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5520,6 +5603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &976637557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6486,6 +6570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &1158055787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6908,6 +6993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &1259282270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7278,7 +7364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1354862213
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7511,6 +7597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &1397327713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8295,6 +8382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &1455840371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9383,6 +9471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 600
   StartPos: {x: 60, y: -210}
+  questionHandler: {fileID: 543718588}
 --- !u!50 &1619530934
 Rigidbody2D:
   serializedVersion: 4
@@ -10065,6 +10154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &1736350391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10358,6 +10448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &1779584590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10678,6 +10769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &1876578119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10794,6 +10886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &1891742621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11114,6 +11207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &1916655118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11332,6 +11426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &1924515723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11876,6 +11971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QuestionOnce: 1
+  questionHandler: {fileID: 543718588}
 --- !u!114 &2001716251
 MonoBehaviour:
   m_ObjectHideFlags: 0
