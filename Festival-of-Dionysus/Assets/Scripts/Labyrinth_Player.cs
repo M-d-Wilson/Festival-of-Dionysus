@@ -11,6 +11,10 @@ public class Labyrinth_Player : MonoBehaviour
     private Rigidbody2D rb;
     private RectTransform UIplace;
     public QuestionHandler questionHandler;
+    //private Collider2D collider;
+    //private bool colEn = false;
+    //private float time;
+    //public GameObject player;
 
     private void Awake()
     {
@@ -18,6 +22,8 @@ public class Labyrinth_Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         UIplace = GetComponent<RectTransform>();
         UIplace.localPosition = StartPos;
+        //collider = GetComponent<Collider2D>();
+       
     }
 
     private void FixedUpdate()
@@ -45,6 +51,15 @@ public class Labyrinth_Player : MonoBehaviour
             {
                 newY = speed * Time.deltaTime * -1;
             }
+            //if (!colEn)
+            //{
+            //    time += Time.deltaTime;
+            //    if (time > 4)
+            //    {
+            //        collider.enabled = !collider.enabled;
+            //        colEn = true;
+            //    }
+            //}
         }
 
         if ((newX > 0 || newX < 0) || (newY > 0 || newY < 0))
