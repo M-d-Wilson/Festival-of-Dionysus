@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class QuestionHandler : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class QuestionHandler : MonoBehaviour
     public string answerA, answerB, answerC, answerD;
     public bool correctA, correctB, correctC, correctD, questionAsked, answeredCorrect;
     public int num;
+    [SerializeField]
+    private Text A, B, C, D, question;
+    [SerializeField]
+    private GameObject qA, qB, qC, qD, quest;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +22,25 @@ public class QuestionHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (questionAsked)
+        {
+            question.text = randomQuestion.question;
+            A.text = answerA;
+            B.text = answerB;
+            C.text = answerC;
+            D.text = answerD;
+            qA.SetActive(true);
+            qB.SetActive(true);
+            qC.SetActive(true);
+            qD.SetActive(true);
+            quest.SetActive(true);
+            //question.text = randomQuestion.question;
+            //A.text = answerA;
+            //B.text = answerB;
+            //C.text = answerC;
+            //D.text = answerD;
 
+        }
     }
 
     public void CallAdd()
@@ -484,49 +508,100 @@ public class QuestionHandler : MonoBehaviour
         }
     }
 
-    public void OnGUI()
-    {
-        if (questionAsked)
-        {
-            GUI.Box(new Rect(Screen.width / 10f, Screen.height / 15, Screen.width / 2f, Screen.height / 15f), randomQuestion.question);
-            if (GUI.Button(new Rect(Screen.width / 10f, Screen.height / 8f, Screen.width / 10f, Screen.height / 10f), answerA))
-            {
-                if (correctA)
-                {
-                    answeredCorrect = true;
-                    questionAsked = false;
-                    correctA = false;
-                }
-            }
-            if (GUI.Button(new Rect(Screen.width / 5f, Screen.height / 8f, Screen.width / 10f, Screen.height / 10f), answerB))
-            {
-                if (correctB)
-                {
-                    answeredCorrect = true;
-                    questionAsked = false;
-                    correctB = false;
-                }
-            }
-            if (GUI.Button(new Rect(Screen.width / 10f, Screen.height / 4f, Screen.width / 10f, Screen.height / 10f), answerC))
-            {
-                if (correctC)
-                {
-                    answeredCorrect = true;
-                    questionAsked = false;
-                    correctC = false;
-                }
-            }
-            if (GUI.Button(new Rect(Screen.width / 5f, Screen.height / 4f, Screen.width / 10f, Screen.height / 10f), answerD))
-            {
-                if (correctD)
-                {
-                    answeredCorrect = true;
-                    questionAsked = false;
-                    correctD = false;
-                }
-            }
+    //public void OnGUI()
+    //{
+    //    if (questionAsked)
+    //    {
+    //        GUI.Box(new Rect(Screen.width / 10f, Screen.height / 15, Screen.width / 2f, Screen.height / 15f), randomQuestion.question);
+    //        if (GUI.Button(new Rect(Screen.width / 10f, Screen.height / 8f, Screen.width / 10f, Screen.height / 10f), answerA))
+    //        {
+    //            if (correctA)
+    //            {
+    //                answeredCorrect = true;
+    //                questionAsked = false;
+    //                correctA = false;
+    //            }
+    //        }
+    //        if (GUI.Button(new Rect(Screen.width / 5f, Screen.height / 8f, Screen.width / 10f, Screen.height / 10f), answerB))
+    //        {
+    //            if (correctB)
+    //            {
+    //                answeredCorrect = true;
+    //                questionAsked = false;
+    //                correctB = false;
+    //            }
+    //        }
+    //        if (GUI.Button(new Rect(Screen.width / 10f, Screen.height / 4f, Screen.width / 10f, Screen.height / 10f), answerC))
+    //        {
+    //            if (correctC)
+    //            {
+    //                answeredCorrect = true;
+    //                questionAsked = false;
+    //                correctC = false;
+    //            }
+    //        }
+    //        if (GUI.Button(new Rect(Screen.width / 5f, Screen.height / 4f, Screen.width / 10f, Screen.height / 10f), answerD))
+    //        {
+    //            if (correctD)
+    //            {
+    //                answeredCorrect = true;
+    //                questionAsked = false;
+    //                correctD = false;
+    //            }
+    //        }
 
-        }
+    //    }
        
+    //}
+    public void ButtonA()
+    {
+        if (correctA)
+        {
+            answeredCorrect = true;
+            questionAsked = false;
+            correctA = false;
+            DeactivateButtons();
+        }
     }
+    public void ButtonB()
+    {
+        if (correctB)
+        {
+            answeredCorrect = true;
+            questionAsked = false;
+            correctB = false;
+            DeactivateButtons();
+        }
+    }
+    public void ButtonC()
+    {
+        if (correctC)
+        {
+            answeredCorrect = true;
+            questionAsked = false;
+            correctC = false;
+            DeactivateButtons();
+        }
+    }
+    public void ButtonD()
+    {
+        if (correctD)
+        {
+            answeredCorrect = true;
+            questionAsked = false;
+            correctD = false;
+            DeactivateButtons();
+        }
+    }
+
+    public void DeactivateButtons()
+    {
+        questionAsked = false;
+        qA.SetActive(false);
+        qB.SetActive(false);
+        qC.SetActive(false);
+        qD.SetActive(false);
+        quest.SetActive(false);
+    }
+
 }

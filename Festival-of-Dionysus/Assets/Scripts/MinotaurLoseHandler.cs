@@ -10,6 +10,10 @@ public class MinotaurLoseHandler : MonoBehaviour
     public GameObject restart, exit, winlose, game, player, enemy;
     public Text losewin;
     public WinMiniGame wmg;
+    [SerializeField]
+    private QuestionHandler qh;
+    [SerializeField]
+    private List<QuestionRooms> qrooms = new List<QuestionRooms>();
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +37,7 @@ public class MinotaurLoseHandler : MonoBehaviour
         }
         if(lose == true)
         {
+            qh.DeactivateButtons();
             player.SetActive(false);
             restart.SetActive(true);
             exit.SetActive(true);
@@ -69,5 +74,10 @@ public class MinotaurLoseHandler : MonoBehaviour
         minotaur.lose = false;
         lose = false;
         wmg.win = false;
+        foreach (QuestionRooms qroom in qrooms)
+        {
+            qroom.ResetQOne();
+        }
+
     }
 }

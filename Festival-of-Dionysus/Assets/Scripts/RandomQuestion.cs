@@ -62,7 +62,7 @@ public class RandomQuestion : MonoBehaviour
     public void MathDivide()
     {
         x = Random.Range(0, 46);
-        y = Random.Range(0, 11);
+        y = Random.Range(1, 11);
         z = x / y;
         if (z == 0 && x != y)
         {
