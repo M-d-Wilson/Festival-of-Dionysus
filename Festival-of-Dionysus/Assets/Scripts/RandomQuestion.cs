@@ -18,6 +18,7 @@ public class RandomQuestion : MonoBehaviour
     void Update()
     {
     }
+
     public void MathAdd()
     {
         x = Random.Range(0, 51);
