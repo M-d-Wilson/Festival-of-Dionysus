@@ -25,4 +25,9 @@ public class QuestionRooms : MonoBehaviour
     {
         questionHandler.CallRandom();
     }
+
+    public void ResetQOne()
+    {
+        QuestionOnce = true;
+    }
 }

@@ -8,6 +8,7 @@ public class Labyrinth_Enemy : MonoBehaviour
     private RectTransform UIplace;
     [SerializeField]
     private Vector2 StartPos;
+    public bool lose = false;
 
     private void Awake()
     {
@@ -19,5 +20,11 @@ public class Labyrinth_Enemy : MonoBehaviour
     public void ResetPos()
     {
         UIplace.localPosition = StartPos;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+            lose = true;
     }
 }

@@ -78,6 +78,10 @@ public class MQuestionHandler : MonoBehaviour
         RandomizeChoice();
         question1.text = rH.question;
         assignOne = false;
+        A1.text = "Q: " + A1.text;
+        B1.text = "W: " + B1.text;
+        C1.text = "A: " + C1.text;
+        D1.text = "S: " + D1.text;
     }
 
     void AssignTwo()
@@ -87,6 +91,10 @@ public class MQuestionHandler : MonoBehaviour
         RandomizeChoice();
         question2.text = rH.question;
         assignTwo = false;
+        A2.text = "I: " + A2.text;
+        B2.text = "O: " + B2.text;
+        C2.text = "K: " + C2.text;
+        D2.text = "L: " + D2.text;
     }
 
     void RandomizeChoice()

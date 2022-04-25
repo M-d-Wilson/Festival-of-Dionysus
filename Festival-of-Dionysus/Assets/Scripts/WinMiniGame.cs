@@ -5,16 +5,18 @@ using UnityEngine;
 public class WinMiniGame : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Game, player, enemy;
+    //private GameObject Game, player, enemy;
+    public bool win = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            player.GetComponent<Labyrinth_Player>().ResetPos();
-            enemy.GetComponent<Labyrinth_Enemy>().ResetPos();
-            Game.SetActive(false);
-            Debug.Log("Game Won");
+            win = true;
+            //player.GetComponent<Labyrinth_Player>().ResetPos();
+            //enemy.GetComponent<Labyrinth_Enemy>().ResetPos();
+            //Game.SetActive(false);
+            //Debug.Log("Game Won");
         }
     }
 }
