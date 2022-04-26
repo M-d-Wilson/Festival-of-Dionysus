@@ -378,9 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1346dcd4d8676284f88a7e87419e26ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Game: {fileID: 1896390499}
-  player: {fileID: 1976528293}
-  enemy: {fileID: 138672100}
+  win: 0
 --- !u!61 &66515710
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1148,6 +1146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIplace: {fileID: 0}
   StartPos: {x: -27, y: -210}
+  lose: 0
 --- !u!58 &138672102
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6288,6 +6287,10 @@ MonoBehaviour:
   Game: {fileID: 604445978}
   Player1: {fileID: 1861626066}
   Player2: {fileID: 1186655010}
+  winner: {fileID: 0}
+  retry: {fileID: 0}
+  exit: {fileID: 0}
+  winnerText: {fileID: 0}
 --- !u!61 &768662966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11543,6 +11546,16 @@ MonoBehaviour:
   questionAsked: 0
   answeredCorrect: 0
   num: 0
+  A: {fileID: 0}
+  B: {fileID: 0}
+  C: {fileID: 0}
+  D: {fileID: 0}
+  question: {fileID: 0}
+  qA: {fileID: 0}
+  qB: {fileID: 0}
+  qC: {fileID: 0}
+  qD: {fileID: 0}
+  quest: {fileID: 0}
 --- !u!4 &1474501849
 Transform:
   m_ObjectHideFlags: 0
