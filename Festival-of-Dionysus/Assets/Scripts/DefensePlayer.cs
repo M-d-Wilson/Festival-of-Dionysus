@@ -16,6 +16,8 @@ public class DefensePlayer : MonoBehaviour
     [SerializeField]
     private DefenseLives lives;
     [SerializeField]
+    private DefenseScore score;
+    [SerializeField]
     bool win, lose, spawnsStoped;
     [SerializeField]
     float endGameTimer, endGameTimeLimit;
@@ -25,6 +27,17 @@ public class DefensePlayer : MonoBehaviour
         return health;
     }
 
+    public int GetAnswersToWin()
+    {
+        return answersToWin;
+    }
+
+    public int GetCorrectAnswers()
+    {
+        return correctAnswers;
+    }
+
+
     private void OnEnable()
     {
         endGameTimer = 0;
@@ -33,6 +46,8 @@ public class DefensePlayer : MonoBehaviour
         win = false;
         lose = false;
         spawnsStoped = false;
+        score.UpdateText();
+        lives.UpdateText();
     }
 
     private void FixedUpdate()
@@ -72,7 +87,8 @@ public class DefensePlayer : MonoBehaviour
             {
                 //Debug.Log("Correct");
                 correctAnswers++;
-                if (correctAnswers >= answersToWin)
+                score.UpdateText();
+                if(correctAnswers >= answersToWin)
                 {
                     //Win game
                     Debug.Log("Win game");
@@ -94,6 +110,7 @@ public class DefensePlayer : MonoBehaviour
             {
                 //Lose game
                 Debug.Log("Lose game");
+                score.UpdateText();
                 lose = true;
                 return;
             }
