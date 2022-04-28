@@ -4068,7 +4068,25 @@ MonoBehaviour:
   losewin: {fileID: 487277685}
   wmg: {fileID: 1931060938}
   qh: {fileID: 543718588}
-  qrooms: []
+  qrooms:
+  - {fileID: 254248337}
+  - {fileID: 1891742620}
+  - {fileID: 1259282269}
+  - {fileID: 668973726}
+  - {fileID: 1397327712}
+  - {fileID: 1779584589}
+  - {fileID: 1455840370}
+  - {fileID: 557589848}
+  - {fileID: 2001716250}
+  - {fileID: 59055508}
+  - {fileID: 1924515722}
+  - {fileID: 1736350390}
+  - {fileID: 903181516}
+  - {fileID: 555027568}
+  - {fileID: 1158055786}
+  - {fileID: 1876578118}
+  - {fileID: 1916655117}
+  - {fileID: 976637556}
 --- !u!1 &481291374
 GameObject:
   m_ObjectHideFlags: 0
@@ -11460,7 +11478,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1354862213
 RectTransform:
   m_ObjectHideFlags: 0
