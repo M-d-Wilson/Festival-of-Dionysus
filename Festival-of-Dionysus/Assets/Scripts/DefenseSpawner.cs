@@ -128,12 +128,15 @@ public class DefenseSpawner : MonoBehaviour
         stop = true;
         foreach (DefenseEnemy enemy in enemies)
         {
+            //this.enemies.Remove(enemy);
             enemy.Die();
         }
+        Debug.Log("Stop Spawns");
     }
 
     public void StartSpawns()
     {
         stop = false;
+        Debug.Log("Start spawns");
     }
 }

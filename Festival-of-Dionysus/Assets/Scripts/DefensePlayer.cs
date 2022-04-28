@@ -8,7 +8,7 @@ public class DefensePlayer : MonoBehaviour
     [SerializeField]
     int answersToWin, correctAnswers, startHealth, health;
     [SerializeField]
-    private Text answer;
+    private Text answer, winLoseDesc;
     [SerializeField]
     DefenseSpawner Spawner;
     [SerializeField]
@@ -21,6 +21,8 @@ public class DefensePlayer : MonoBehaviour
     bool win, lose, spawnsStoped;
     [SerializeField]
     float endGameTimer, endGameTimeLimit;
+    [SerializeField]
+    private GameObject exit, restart, winLose;
 
     public int GetHealth()
     {
@@ -60,22 +62,27 @@ public class DefensePlayer : MonoBehaviour
                 Spawner.StopSpawns();
                 spawnsStoped = true;
             }
-            endGameTimer += Time.deltaTime;
-            //display win stuff
-            if (endGameTimer > endGameTimeLimit)
-            {
-                endGameTimer = 0;
-                game.SetActive(false);
-            }
-        }else if(lose)
+            winLoseDesc.text = "You successully defended Greece!";
+            LoadWinLose();
+            //endGameTimer += Time.deltaTime;
+            ////display win stuff
+            //if (endGameTimer > endGameTimeLimit)
+            //{
+            //    endGameTimer = 0;
+            //    game.SetActive(false);
+            //}
+        }
+        else if (lose)
         {
-            endGameTimer += Time.deltaTime;
-            //dipaly lose stuff
-            if (endGameTimer > endGameTimeLimit)
-            {
-                endGameTimer = 0;
-                game.SetActive(false);
-            }
+            LoadWinLose();
+            winLoseDesc.text = "Oh no, Greece was defeated!";
+            //endGameTimer += Time.deltaTime;
+            ////dipaly lose stuff
+            //if (endGameTimer > endGameTimeLimit)
+            //{
+            //    endGameTimer = 0;
+            //    game.SetActive(false);
+            //}
         }
     }
 
@@ -88,7 +95,7 @@ public class DefensePlayer : MonoBehaviour
                 //Debug.Log("Correct");
                 correctAnswers++;
                 score.UpdateText();
-                if(correctAnswers >= answersToWin)
+                if (correctAnswers >= answersToWin)
                 {
                     //Win game
                     Debug.Log("Win game");
@@ -100,7 +107,7 @@ public class DefensePlayer : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    { 
+    {
         //Debug.Log("Hit");
         if (collision.gameObject.CompareTag("Enemy"))
         {
@@ -116,5 +123,37 @@ public class DefensePlayer : MonoBehaviour
             }
             collision.gameObject.GetComponent<DefenseEnemy>().HitBase();
         }
+    }
+
+    public void Reset()
+    {
+        winLose.SetActive(false);
+        exit.SetActive(false);
+        restart.SetActive(false);
+        game.SetActive(false);
+        game.SetActive(true);
+        ////Spawner.StopSpawns();
+        //endGameTimer = 0;
+        //correctAnswers = 0;
+        //health = startHealth;
+        //win = false;
+        //lose = false;
+        //spawnsStoped = false;
+        //score.UpdateText();
+        //lives.UpdateText();
+        //Spawner.StartSpawns();
+    }
+
+    private void LoadWinLose()
+    {
+        winLose.SetActive(true);
+        exit.SetActive(true);
+        restart.SetActive(true);
+    }
+
+    public void Exit()
+    {
+        Reset();
+        game.SetActive(false);
     }
 }
