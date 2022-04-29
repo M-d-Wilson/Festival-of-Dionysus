@@ -7,6 +7,12 @@ TagManager:
   - Wall
   - Player1
   - Player2
+  - Enemy
+  - Medusa
+  - Labrinth
+  - Defend
+  - MC
+  - LevelSelect
   layers:
   - Default
   - TransparentFX

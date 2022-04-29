@@ -6,6 +6,6 @@ public class AudioLoop : MonoBehaviour
 {
     void Awake()
 	{
-		DontDestroyOnLoad(transform.gameObject);
+		//DontDestroyOnLoad(transform.gameObject);
 	}
 }
