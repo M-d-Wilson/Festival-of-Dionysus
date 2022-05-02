@@ -92,6 +92,7 @@ public class DefensePlayer : MonoBehaviour
         {
             if (Spawner.checkAnswers(int.Parse(answer.text)))
             {
+                answer.text = "";
                 //Debug.Log("Correct");
                 correctAnswers++;
                 score.UpdateText();
