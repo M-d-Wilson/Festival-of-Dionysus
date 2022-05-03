@@ -21,7 +21,7 @@ public class RandomQuestion : MonoBehaviour
 
     public void MathAdd()
     {
-        x = Random.Range(0, 51);
+        x = Random.Range(1, 51);
         y = Random.Range(0, 51);
         Debug.Log(x + " + " + y + " = ");
         z = x + y;
@@ -31,7 +31,7 @@ public class RandomQuestion : MonoBehaviour
     }
     public void MathSubtract()
     {
-        x = Random.Range(0, 51);
+        x = Random.Range(1, 51);
         y = Random.Range(0, 51);
         Debug.Log(x + " - " + y + " = ");
         if (x - y > 0)
@@ -53,7 +53,7 @@ public class RandomQuestion : MonoBehaviour
     public void MathMultiply()
     {
         x = Random.Range(0, 10);
-        y = Random.Range(0, 10);
+        y = Random.Range(1, 10);
         z = x * y;
         Debug.Log(x + " x " + y + " = ");
         Debug.Log(z);
@@ -62,7 +62,7 @@ public class RandomQuestion : MonoBehaviour
 
     public void MathDivide()
     {
-        x = Random.Range(0, 46);
+        x = Random.Range(1, 46);
         y = Random.Range(1, 11);
         z = x / y;
         if (z == 0 && x != y)
