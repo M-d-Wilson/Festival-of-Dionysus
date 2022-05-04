@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5364,7 +5364,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &577865803
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8540,7 +8540,6 @@ GameObject:
   - component: {fileID: 986870896}
   - component: {fileID: 986870897}
   - component: {fileID: 986870898}
-  - component: {fileID: 986870899}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -8643,18 +8642,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1920900617}
---- !u!114 &986870899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 986870892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d122674b39cedc45960b3499d8491ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &999650095
 GameObject:
   m_ObjectHideFlags: 0
@@ -15051,7 +15038,6 @@ GameObject:
   - component: {fileID: 1644184847}
   - component: {fileID: 1644184846}
   - component: {fileID: 1644184845}
-  - component: {fileID: 1644184849}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -15145,18 +15131,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1644184849
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1644184844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d122674b39cedc45960b3499d8491ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1688947274
 GameObject:
   m_ObjectHideFlags: 0
