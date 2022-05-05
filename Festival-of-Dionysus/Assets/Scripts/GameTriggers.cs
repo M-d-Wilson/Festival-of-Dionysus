@@ -11,6 +11,7 @@ public class GameTriggers : MonoBehaviour
 	public bool isActive;
 	public Rigidbody rigidbody;
 	public GameObject Player;
+	public ThirdPersonCharacterController playerCont;
 	
 	void Start()
 	{
@@ -35,7 +36,8 @@ public class GameTriggers : MonoBehaviour
 			Game2.SetActive(true);
 			Cursor.visible = true;
 			Screen.lockCursor = false;
-			Player.SetActive(false);
+			//Player.SetActive(false); <--- This was turning the camera off???
+			playerCont.gameOpen = true;
 			
 		}
 		else if (col.tag == "Defend")
@@ -45,7 +47,8 @@ public class GameTriggers : MonoBehaviour
 			Game3.SetActive(true);
 			Cursor.visible = true;
 			Screen.lockCursor = false;
-			Player.SetActive(false);
+			//Player.SetActive(false);
+			playerCont.gameOpen = true;
 
 		}
 		else if (col.tag == "Labrinth")
@@ -55,7 +58,8 @@ public class GameTriggers : MonoBehaviour
 			Game1.SetActive(true);
 			Cursor.visible = true;
 			Screen.lockCursor = false;
-			Player.SetActive(false);
+			//Player.SetActive(false);
+			playerCont.gameOpen = true;
 
 
 		}

@@ -62,9 +62,12 @@ public class RandomQuestion : MonoBehaviour
 
     public void MathDivide()
     {
-        x = Random.Range(1, 46);
-        y = Random.Range(1, 11);
-        z = x / y;
+        x = Random.Range(1, 12);
+        y = Random.Range(2, 11);
+        z = x * y;
+        int temp = z;
+        z = x;
+        x = temp;
         if (z == 0 && x != y)
         {
             MathDivide();
@@ -103,15 +106,15 @@ public class RandomQuestion : MonoBehaviour
                 break;
             case 15:
                 question = "Apollo was the god of";
-                answer1 = "All of the above";
-                answer2 = "Music";
+                answer1 = "Music and the Sun";
+                answer2 = "Chaos";
                 answer3 = "the Sun";
                 answer4 = "Light";
                 break;
             case 14:
                 question = "Artemis was the god of ";
-                answer1 = "All of the Above";
-                answer2 = "The Moon";
+                answer1 = "The Moon and Hunters";
+                answer2 = "The Sun and Music";
                 answer3 = "Chastity";
                 answer4 = "Hunters";
                 break;

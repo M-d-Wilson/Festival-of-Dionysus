@@ -14,6 +14,8 @@ public class MinotaurLoseHandler : MonoBehaviour
     private QuestionHandler qh;
     [SerializeField]
     private List<QuestionRooms> qrooms = new List<QuestionRooms>();
+    [SerializeField]
+    private ThirdPersonCharacterController controller;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +54,7 @@ public class MinotaurLoseHandler : MonoBehaviour
         enemy.GetComponent<Labyrinth_Enemy>().ResetPos();
         game.SetActive(false);
         Debug.Log("Exiting Game");
+        controller.gameOpen = false;
         ResetGame();
 
     }

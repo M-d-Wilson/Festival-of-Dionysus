@@ -15,6 +15,7 @@ public class DefenseEnemy : MonoBehaviour
     private RandomQuestion questions;
     [SerializeField]
     private bool dying;
+    private int i;
 
     public void setSpeed(float x)
     {
@@ -34,7 +35,31 @@ public class DefenseEnemy : MonoBehaviour
         //makes question if the question
         if (questions != null)
         {
-            questions.MathAdd();
+            i = Random.Range(0, 10);
+            if (i == 0 || i == 4)
+            {
+                questions.MathDivide();
+                if(speed < -2 || speed == null)
+                {
+                    speed = -2;
+                }
+            }
+            else if (i == 1 || i == 5)
+            {
+                questions.MathMultiply();
+                if (speed < -5 || speed == null)
+                {
+                    speed = -5;
+                }
+            }
+            else if (i == 2 || i == 3 || i == 6)
+            {
+                questions.MathSubtract();
+            }
+            else
+            {
+                questions.MathAdd();
+            }
             problem.text = questions.question.Substring(8);
         }
         dying = false;
@@ -47,7 +72,31 @@ public class DefenseEnemy : MonoBehaviour
         //makes question if the question has not been made yet
         if (questions != null && problem.text == "")
         {
-            questions.MathAdd();
+            i = Random.Range(0, 4);
+            if (i == 0)
+            {
+                questions.MathDivide();
+                if (speed < -2 || speed == null)
+                {
+                    speed = -2;
+                }
+            }
+            else if (i == 1)
+            {
+                questions.MathMultiply();
+                if (speed < -5 || speed == null)
+                {
+                    speed = -5;
+                }
+            }
+            else if (i == 2)
+            {
+                questions.MathSubtract();
+            }
+            else
+            {
+                questions.MathAdd();
+            }
             problem.text = questions.question.Substring(8);
         }
 

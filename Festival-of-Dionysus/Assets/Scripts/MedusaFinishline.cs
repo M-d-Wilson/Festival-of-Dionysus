@@ -9,6 +9,8 @@ public class MedusaFinishline : MonoBehaviour
     private GameObject Game, Player1, Player2, winner, retry, exit;
     private bool playerwin;
     public Text winnerText;
+    [SerializeField]
+    private ThirdPersonCharacterController controller;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -44,6 +46,7 @@ public class MedusaFinishline : MonoBehaviour
     public void Exit()
     {
         Reset();
+        controller.gameOpen = false;
         Game.SetActive(false);
     }
 

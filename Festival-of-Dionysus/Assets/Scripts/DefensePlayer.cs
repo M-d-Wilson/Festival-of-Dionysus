@@ -23,6 +23,8 @@ public class DefensePlayer : MonoBehaviour
     float endGameTimer, endGameTimeLimit;
     [SerializeField]
     private GameObject exit, restart, winLose;
+    [SerializeField]
+    private ThirdPersonCharacterController controller;
 
     public int GetHealth()
     {
@@ -155,6 +157,7 @@ public class DefensePlayer : MonoBehaviour
     public void Exit()
     {
         Reset();
+        controller.gameOpen = false;
         game.SetActive(false);
     }
 }
