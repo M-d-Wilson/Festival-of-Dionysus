@@ -41,7 +41,7 @@ public class DefenseEnemy : MonoBehaviour
                 questions.MathDivide();
                 if(speed < -2 || speed == null)
                 {
-                    speed = -2;
+                    speed += 2;
                 }
             }
             else if (i == 1 || i == 5)
@@ -49,7 +49,7 @@ public class DefenseEnemy : MonoBehaviour
                 questions.MathMultiply();
                 if (speed < -5 || speed == null)
                 {
-                    speed = -5;
+                    speed += 5;
                 }
             }
             else if (i == 2 || i == 3 || i == 6)
