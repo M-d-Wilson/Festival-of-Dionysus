@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -155,7 +155,7 @@ RectTransform:
   - {fileID: 57028036}
   - {fileID: 994635562}
   m_Father: {fileID: 1644184848}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1252,9 +1252,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1053551128}
-  - {fileID: 1989965534}
   m_Father: {fileID: 1644184848}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2506,7 +2505,7 @@ RectTransform:
   m_Children:
   - {fileID: 190577580}
   m_Father: {fileID: 1644184848}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2622,7 +2621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &206249034
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2644,7 +2643,7 @@ RectTransform:
   - {fileID: 5349812095395664755}
   - {fileID: 545291739}
   m_Father: {fileID: 1644184848}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4806,6 +4805,7 @@ MonoBehaviour:
   - {fileID: 1876578118}
   - {fileID: 1916655117}
   - {fileID: 976637556}
+  controller: {fileID: 0}
 --- !u!1 &481291374
 GameObject:
   m_ObjectHideFlags: 0
@@ -5978,7 +5978,7 @@ RectTransform:
   - {fileID: 1078001756}
   - {fileID: 1414966216}
   m_Father: {fileID: 1644184848}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9508,6 +9508,9 @@ MonoBehaviour:
   Game2: {fileID: 577865802}
   Game3: {fileID: 206249033}
   DefencePlayer: {fileID: 1920900615}
+  startGame1: {fileID: 0}
+  startGame2: {fileID: 0}
+  startGame3: {fileID: 0}
 --- !u!114 &986870897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12330,7 +12333,7 @@ RectTransform:
   m_Children:
   - {fileID: 1966914907}
   m_Father: {fileID: 1644184848}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13081,7 +13084,7 @@ RectTransform:
   - {fileID: 433700634}
   - {fileID: 473848769}
   m_Father: {fileID: 1644184848}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16962,6 +16965,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1989965534}
   - {fileID: 190777467}
   - {fileID: 1268220472}
   - {fileID: 4082999}
@@ -19196,6 +19200,7 @@ MonoBehaviour:
   exit: {fileID: 145593769}
   restart: {fileID: 1068170708}
   winLose: {fileID: 455128482}
+  controller: {fileID: 0}
 --- !u!114 &1920900618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20286,12 +20291,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1423546615}
-  m_Father: {fileID: 66829997}
-  m_RootOrder: 1
+  m_Father: {fileID: 1644184848}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -185}
+  m_AnchoredPosition: {x: 0, y: 52}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1989965535
@@ -20601,6 +20606,7 @@ MonoBehaviour:
   retry: {fileID: 426855260}
   exit: {fileID: 1017299634}
   winnerText: {fileID: 1512302994}
+  controller: {fileID: 0}
 --- !u!61 &2012082657
 BoxCollider2D:
   m_ObjectHideFlags: 0

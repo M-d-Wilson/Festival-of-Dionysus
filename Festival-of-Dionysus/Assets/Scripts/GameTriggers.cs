@@ -16,7 +16,7 @@ public class GameTriggers : MonoBehaviour
 	void Start()
 	{
 
-		Time.timeScale = 1;
+		//Time.timeScale = 1;
 	
 
 		Game2.SetActive(false);
